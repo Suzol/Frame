@@ -9,11 +9,11 @@
 4. ifconfig ethx(x=1,2,3,4) down (为了后面绑定dpdk)
 
 ## 编译安装
-
+```
 RTE_SDK        dpdk安装目录
 RTE_TARGET     编译器（根据机器类型选择）
 EXTRA_CFLAGS   打开调试选项
-
+```
 ### 1.环境变量
 ```
 cd /home/dpdk-1.8.0/
@@ -155,4 +155,7 @@ r -c 0xf -n 2 -- -i
 ```
 或者到x86_64-native-linuxapp-gcc下make
 
-下面是dpdk源码分析
+
+总结下：编译（生成驱动）、Load驱动、设置大页内存、网卡与驱动绑定
+
+接下来对dpdk源码分析
